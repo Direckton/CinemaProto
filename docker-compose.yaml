@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  cinema.api:
+    image: cinemaapi
+    container_name: cinema.api
+    build: 
+      context: .
+      dockerfile: Cinema.Server/Cinema/Dockerfile
+    ports:
+      - "8000:8080"
+      - "8001:8081"
+  
+  cinema.ui:
+    image: cinemaui
+    container_name: cinema.ui
+    build: ./cinema.client
+    ports:
+      - "3000:3000"
