@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Cors;
-
+﻿
 namespace Cinema.Model
 {
     public class User
