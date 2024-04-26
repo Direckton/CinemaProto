@@ -17,3 +17,12 @@ services:
     build: ./cinema.client
     ports:
       - "3000:3000"
+  
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=Cinema'
+      - 'MYSQL_ROOT_PASSWORD=password'
+    ports:
+      - '3307:3306'
+
